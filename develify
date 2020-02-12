@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Develifying ${1}"
+
+DATE_STRING=`date +%Y%m%d`
+FILE_STRING=`echo $1 | sed -e s/-/_/g`
+NEW_FILENAME=${DATE_STRING}_${FILE_STRING}
+echo - ${NEW_FILENAME}
+
+mv ${1} ${NEW_FILENAME}
+
